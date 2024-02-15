@@ -1,0 +1,78 @@
+﻿@using Dashboard.Data
+@model IEnumerable<AuthPage>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+@* var dataforeachauth=@ViewBag.dataforeachauth *@
+    <div class="content">
+        <ul>
+    @foreach (var x in Model)
+    {
+            <li class="item" itemid="@x.Id">
+              @*   
+                @Html.AjaxActionLink(x.NameAr,"ViewName",new{id=x.Id},new AjaxOptions(){
+               LoadingElementId="info",
+                HttpMethod="Get",
+                UpdateTargetId="updatedinfo",
+                InsertionMode=InsertionMode.Replace
+            })  *@
+            @x.NameAr
+            <i class="fa @x.Icon"></i>
+        <ul class="dropdownlist"></ul>
+        </li>
+          @*   <div id="updatedinfo" ></div> *@
+    }
+       
+    </ul>
+   @* <div class="info"></div> *@
+    </div>
+
+   
+    @section Scripts{
+
+    <script>
+        var id
+       
+        var x = document.querySelectorAll(".item")
+        
+                  
+        Array.from(x).forEach(el => {
+           el.onclick=()=>{
+            
+                id = el.getAttribute("itemid")
+             
+                console.log(el.getAttribute("itemid"))
+                console.log($(`[itemid=${id}]>.dropdownlist`).html())
+                $(`[itemid=${id}]>.dropdownlist`).html("")
+                $(`[itemid=${id}]>.dropdownlist`).toggleClass("show");
+               $(`[itemid=${id}].item`).toggleClass("colorred");
+                $.getJSON(`/Home/ViewName?id=${id}`, function (data) {
+                    console.log(data);
+                   data.forEach(item=> {
+                     
+                        $(`[itemid=${id}]>.dropdownlist`).append(`<li dropdownid="${item.id}">${item.nameAr}</li>`);
+                       
+                  
+                    });
+                
+                });
+           } 
+        })
+            
+           
+      
+            
+    
+     
+    </script>
+
+	
+    }
+
+   
+
