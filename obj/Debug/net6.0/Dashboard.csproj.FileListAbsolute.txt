@@ -250,3 +250,4 @@ E:\dashboard\Dashboard\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.E
 E:\dashboard\Dashboard\bin\Debug\net6.0\AspNetCore.Unobtrusive.Ajax.dll
 E:\dashboard\Dashboard\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 E:\dashboard\Dashboard\obj\Debug\net6.0\Dashboard.MvcApplicationPartsAssemblyInfo.cs
+E:\dashboard\Dashboard\obj\Debug\net6.0\Dashboard.sourcelink.json

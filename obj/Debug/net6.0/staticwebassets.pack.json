@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Dashboard.bundle.scp.css"
     },
     {
+      "Id": "E:\\dashboard\\Dashboard\\wwwroot\\css\\DepartmentStyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\DepartmentStyleSheet.css"
+    },
+    {
+      "Id": "E:\\dashboard\\Dashboard\\wwwroot\\css\\EmployeeStyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\EmployeeStyleSheet.css"
+    },
+    {
       "Id": "E:\\dashboard\\Dashboard\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

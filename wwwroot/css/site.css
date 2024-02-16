@@ -58,3 +58,8 @@ color:red
 .show{
     display:block;
 }
+.emp{
+    background-color:antiquewhite;
+}.dept{
+    background-color:aquamarine;
+}

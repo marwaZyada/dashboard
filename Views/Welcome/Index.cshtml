@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Welcome";
+    Layout = "~/Views/Shared/_WelcomeLayout.cshtml";
+}
+
+<div class="d-flex justify-content-center align-items-center vh-100 flex-column">
+    <h1>Welcome</h1>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script>
+        console.log("hihi")
+        setTimeout(function () {
+            console.log("welcome");
+        location.href = "https://localhost:7183/Home/Index"
+        } , 1000);
+    </script>
+}
+
